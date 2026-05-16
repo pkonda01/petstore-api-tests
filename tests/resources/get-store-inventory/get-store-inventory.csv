@@ -1,0 +1,4 @@
+test_case_id,description,expected_result,test_data,markers
+tc_001,Basic API validation,200 response,,smoke
+tc_002,Authentication test,Valid token response,,regression
+tc_003,Data validation,Schema compliance,,unit

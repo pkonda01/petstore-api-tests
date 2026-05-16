@@ -1,0 +1,10 @@
+{
+    "test_001": [
+        {
+            "jmespath_expr": "responseHeader.transactionNotification.status",
+            "assertion_type": "equals",
+            "expected_value": "<EXPECTED_STATUS>",
+            "description": "test_status_success:Transaction status should be <EXPECTED_STATUS>"
+        }
+    ]
+}

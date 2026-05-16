@@ -1,0 +1,12 @@
+{
+    "test_001": {
+        "input_data": [
+            {}
+        ],
+        "output_data": [
+            {
+                "EXPECTED_STATUS": "1"
+            }
+        ]
+    }
+}

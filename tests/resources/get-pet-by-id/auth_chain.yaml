@@ -1,0 +1,6 @@
+authentication:
+  type: "none"
+  endpoint: ""
+  credentials:
+    username: ""
+    password: ""

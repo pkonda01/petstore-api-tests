@@ -1,0 +1,26 @@
+[project]
+name = "petstore-api-tests"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "bscpypi"
+url = "https://artifactory-prod.bsc.bscal.com/artifactory/api/pypi/bscpypi/simple"
+priority = "supplemental"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+# lcf-core = {version = "1.4.9", source = "bscpypi"}
+# lcf-core = {path = "/Users/pkonda01/Documents/dev/lcf-python-api/dist/lcf_core-1.4.5-py3-none-any.whl"}
+# lcf-core = {path = "/Users/pkonda01/Documents/dev/lcf-python-api/dist/lcf_core-1.4.6-py3-none-any.whl"}
+lcf-core = {path = "/Users/pkonda01/Documents/dev/lcf-python-api/dist/lcf_core-1.4.10-py3-none-any.whl"}
+test_intelligence = {path = "/Users/pkonda01/Documents/workspace/test-intelligence/dist/test_intelligence-0.2.0-py3-none-any.whl"}
+

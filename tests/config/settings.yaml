@@ -1,0 +1,81 @@
+base_url: https://petstore.swagger.io/v2/user/user1
+environments:
+  qa:
+    databases:
+    - name: facets
+      type: oracle
+      username: ${FACETS_USER}
+      password: ${FACETS_PASSWORD}
+      server: ${FACETS_SERVER}
+      port: ${FACETS_PORT}
+      database: ${FACETS_DB}
+      connection_string: ''
+    - name: denodo
+      type: denodo
+      username: ${DENODO_USER}
+      password: ${DENODO_PASSWORD}
+      server: ${DENODO_SERVER}
+      port: ${DENODO_PORT}
+      dbname: ${DENODO_SERVICE}
+      connection_string: ''
+    - name: sqlite
+      type: sqlite
+      db_path: login.db
+    - name: ldap
+      type: ldap
+      LDAP_HOSTNAME: ${LDAP_HOSTNAME}
+      LDAP_USERNAME: ${LDAP_USERNAME}
+      LDAP_PASSWORD: ${LDAP_PASSWORD}
+    - name: mongo
+      type: mongo
+      QE_MONGO_SERVER: ${QE_MONGO_SERVER}
+      QE_MONGO_PORT: ${QE_MONGO_PORT}
+      QE_MONGO_DB: ${QE_MONGO_DB}
+      QE_MONGO_USER: ${QE_MONGO_USER}
+      QE_MONGO_PASSWORD: ${QE_MONGO_PASSWORD}
+      QE_MONGO_CERTFILE: ${QE_MONGO_CERTFILE}
+      collection_name: ${QE_MONGO_COLLECTION}
+    - name: netezza
+      type: netezza
+      server: ${NETEZZA_SERVER}
+      port: ${NETEZZA_PORT}
+      dbname: ${NETEZZA_DB}
+      username: ${NETEZZA_USER}
+      password: ${NETEZZA_PASSWORD}
+    - name: snowflake
+      type: snowflake
+      username: ${SNOWFLAKE_USER}
+      password: ${SNOWFLAKE_PASSWORD}
+      account: at13877.central-us.privatelink
+      server_uri: jdbc:snowflake://at13877.central-us.privatelink.snowflakecomputing.com
+      warehouse: EC_MHR_IM_QA1_SVCELT_WH
+      database: EC_MHR_IM_QA1
+      schema: MBR_HREC
+      role: EC_MHR_IM_QA1_SVCELT_FR
+    - name: propdb
+      type: oracle
+      username: ${PROPSDB_USER}
+      password: ${PROPSDB_PASSWORD}
+      server: ${PROPSDB_SERVER}
+      port: ${PROPSDB_PORT}
+      dbname: ${PROPSDB_DB}
+    - name: mssql
+      type: mssql
+      username: ${MSSQL_USER}
+      password: ${MSSQL_PASSWORD}
+      server: ${MSSQL_SERVER}
+      port: ${MSSQL_PORT}
+      dbname: ${MSSQL_DB}
+    - name: ceods
+      type: oracle
+      username: ${CEODS_USER}
+      password: ${CEODS_PASSWORD}
+      server: ${CEODS_SERVER}
+      port: ${CEODS_PORT}
+      dbname: ${CEODS_DB}
+    apis:
+    - name: get-user-by-username
+      standard_path_to_files: tests/resources/get-user-by-username/
+      request_type: GET
+      headers: {}
+      api_base_url: https://petstore.swagger.io/v2/user/user1
